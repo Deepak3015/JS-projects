@@ -17,15 +17,19 @@
     score.win = 0;
     score.lose = 0;
     score.tie = 0;
-    alert(`wins:${score.win} ,losses:${score.lose} ,tie:${score.tie}`)
+    alert(`wins:${score.win} ,losses:${score.lose} ,tie:${score.tie} choose any option to start a new Game `)
     ">Reset Score</button>
     <script>  
-    score = {
-      win : 0,
-      lose : 0,
-      tie : 0
+   let score =  JSON.parse(localStorage.getItem('score'));
 
-    };
+   if (score===null){
+    score = {
+      win:0,
+      lose:0,
+      tie:0
+    }
+   }
+   
     function playerMove(playerChoice){
       let computerMove = pickComputerMove();
       let result = '';
@@ -64,6 +68,7 @@
        else if (result==='It\'s a tie'){
         score.tie+=1;
        }
+      localStorage.setItem('score',JSON.stringify(score));
       
 alert(`You picked ${playerChoice} .computer picked ${computerMove}. ${result} wins:${score.win} ,losses:${score.lose} ,tie:${score.tie}`);
           
