@@ -30,21 +30,17 @@
         } else if (computerMove === 'scissors') {
           result = 'It\'s a tie';
         }
-        alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);}
+      }
         else if (playerChoice==='paper'){
-          
-  
-          let result = '';
-          if (computerMove === 'rock') {
+         if (computerMove === 'rock') {
             result = 'You win';
           } else if (computerMove === 'paper') {
             result = 'It\'s a tie';
           } else if (computerMove === 'scissors') {
             result = 'You lose';
           }
-          alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
-
-         else if (playerChoice==='rock'){
+        }
+          else if (playerChoice==='rock'){
           const computerMove = pickComputerMove();
     
           let result = '';
@@ -55,11 +51,10 @@
           } else if (computerMove === 'scissors') {
             result = 'You win';
           }
-          alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
-
         }
-        }
-  }
+          alert(`You ${playerChoice}.computer picked ${computerMove}`);
+        
+      }   
    function pickComputerMove(){const randomNumber = Math.random();
     if (randomNumber < 1/3) {
       computerMove = 'rock';
