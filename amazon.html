@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALCULATE</title>
+</head>
+<body style="background-color: aquamarine;font-family: 'Roboto',Arial;" class="bar">
+  <p class="line1" style="color: brown;"></p>
+  <P class="line2"style="color: brown;"></P>
+  <P class="line3"style="color: brown;"></P>
+  <input placeholder="Cost of order" style="border-style: groove;" class="dollar" >
+  <button onclick="calculate();">Calculate</button>
+  <p class="total" style="color: brown;"></p>
+  <script>
+    function calculate (){
+      let inputElement= parseFloat(document.querySelector
+      ('.dollar').value);
+      
+      if (inputElement<40){
+        inputElement+=10;
+        writer('.total',`$${inputElement}($10 for shippin)`)}
+        else {
+          writer('.total',`$${inputElement} yay free shipping`)
+        }
+      };
+    function writer(Selector,content){
+    
+     document.querySelector(Selector).innerHTML =content;
+     
+    };
+    writer('.line1','Amazon shipping calculator');
+    writer('.line2','Orders under $40 = +$10 shipping.');
+    writer('.line3','Orders Over $40 = free shipping.');
+  </script>
+</body>
+</html>
