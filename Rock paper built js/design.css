@@ -1,6 +1,77 @@
-body{
-  background-color: rgb(25, 25, 25);
+body {
+  font-family: 'Roboto', Arial;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.para{
-  color:white;
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+button.same {
+  background: none;
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.same:hover {
+  transform: scale(1.1);
+}
+
+.move-icon {
+  width: 50px;
+  height: 50px;
+}
+
+p.chooseOperator {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+p.matchData {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 30px 0;
+}
+
+p.matchData img {
+  width: 70px;
+  height: 70px;
+}
+
+p.score-js {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+p, h1, button {
+  margin: 10px 0;
 }

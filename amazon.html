@@ -4,13 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CALCULATE</title>
+  <style>
+    .subs{
+      background-color: #deb887;
+      color: aliceblue;
+      padding: 15px 15px;
+      display: inline-block;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .subs:hover{
+      background-color: #c1916b;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body style="background-color: aquamarine;font-family: 'Roboto',Arial;" class="bar">
   <p class="line1" style="color: brown;"></p>
   <P class="line2"style="color: brown;"></P>
   <P class="line3"style="color: brown;"></P>
   <input placeholder="Cost of order" style="border-style: groove;" class="dollar" >
-  <button onclick="calculate();">Calculate</button>
+  <button class="subs" onclick="calculate();">Calculate</button>
   <p class="total" style="color: brown;"></p>
   <script>
     function calculate (){
