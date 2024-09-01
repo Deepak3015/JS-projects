@@ -61,6 +61,37 @@
 // console.log(countPositive(deep));
 
 
+// function wordSearcher(array,word){
+//   for(let i =0;i<array.length;i++){
+//     if (array[i]===word){
+//       return i;
+//       break
+//     }
+
+//   }
+//   return -1;
+// };
+
+// data = ['hello','world','search','good'];
+// wordSearcher(data,'search');
+
+function removeEgg(array,){
+  const reversedFoods = array.reverse()
+  const result = [];
+  let eggsRemoved = 0;
+  for(let i =0;i<reversedFoods.length;i++){
+    if (array[i]==='Egg'&& eggsRemoved<2){
+      eggsRemoved++;
+      continue;
+    }
+    result.push(reversedFoods[i]);
+    
+
+  }
+};
+
+data = ['Egg','apple','Egg','Egg','ham'];
+console.log(removeEgg(data,'Egg'));
 
   
   </script>
