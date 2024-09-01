@@ -8,6 +8,23 @@ if (score === null) {
     };
 }
 socresUpdate();
+let isPlaying = false;
+let validId;
+
+function autoPlay(){
+    if (!isPlaying){
+      validId =   setInterval(function(){
+            const playGame= pickComputerMove();
+            playerMove(playGame);
+        },1000);
+        isPlaying = true;
+    }
+    else{
+        clearInterval(validId)
+        isPlaying = false;
+    }
+
+}
 
 function playerMove(playerChoice) {
     const computerMove = pickComputerMove();
@@ -50,10 +67,8 @@ function playerMove(playerChoice) {
 
     socresUpdate();
 
-    // Display the result
     document.querySelector('.chooseOperator').innerHTML = result;
 
-    // Update the moves
     document.getElementById('playerMoveIcon').src = `${playerChoice}-emoji.png`;
     document.getElementById('computerMoveIcon').src = `${computerMove}-emoji.png`;
 }
