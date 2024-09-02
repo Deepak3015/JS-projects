@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+  <button class="DOM" onclick="clicker();">Add</button>
   <script>
   //  function getLastValue (array){
   //   const lastIndex = array.length-1;
@@ -74,6 +75,20 @@
 
 // data = ['hello','world','search','good'];
 // wordSearcher(data,'search');
+
+
+function clicker(){
+  const text = document.querySelector('.DOM');
+  if (text.innerText ==='Add'){
+    setTimeout(function(){
+      text.innerHTML = 'finished';
+    },2000)
+  }
+  else{
+    text.innerHTML = 'Add';
+  }
+
+};
 
 function removeEgg(array,){
   const reversedFoods = array.reverse()
