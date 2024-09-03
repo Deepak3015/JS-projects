@@ -111,16 +111,23 @@
 
 // console.log(multiply(2,3));
 
-countpositive = (array)=>{
-  let count = 0;
-  array.forEach((numbers)=>{
-    if(numbers>0)
-    {count++;}}
-);return count;}
+// countpositive = (array)=>{
+//   let count = 0;
+//   array.forEach((numbers)=>{
+//     if(numbers>0)
+//     {count++;}}
+// );return count;}
 
 const Aryan = [1,2,3,4,-4,-5,8]
-console.log(countpositive(Aryan));
-  
+// console.log(countpositive(Aryan));
+
+const addNum = (Array,num)=>{
+ return Array.map((value) => { return value + num;
+  });
+};
+ 
+const result = addNum(Aryan,2);
+console.log(result)
   </script>
 </body>
 </html>
