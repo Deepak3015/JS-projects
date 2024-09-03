@@ -26,6 +26,28 @@ function autoPlay(){
 
 }
 
+document.querySelector('.same-jspaper').addEventListener('click',()=>{
+    playerMove('paper')
+});
+
+document.querySelector('.same-jsscissors').addEventListener('click',()=>{
+    playerMove('scissors')
+});
+
+document.querySelector('.same-jsrock').addEventListener('click',()=>{
+    playerMove('rock')
+});
+
+document.body.addEventListener('keydown',(event)=>{
+    if(event.key === 'r')
+      {playerMove('rock')}
+    else if(event.key ==='p')
+      {playerMove('paper')}
+    else if(event.key === 's')
+      {playerMove('scissors')}
+
+})
+
 function playerMove(playerChoice) {
     const computerMove = pickComputerMove();
     let result = '';

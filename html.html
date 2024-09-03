@@ -77,37 +77,49 @@
 // wordSearcher(data,'search');
 
 
-function clicker(){
-  const text = document.querySelector('.DOM');
-  if (text.innerText ==='Add'){
-    setTimeout(function(){
-      text.innerHTML = 'finished';
-    },2000)
-  }
-  else{
-    text.innerHTML = 'Add';
-  }
+// function clicker(){
+//   const text = document.querySelector('.DOM');
+//   if (text.innerText ==='Add'){
+//     setTimeout(function(){
+//       text.innerHTML = 'finished';
+//     },2000)
+//   }
+//   else{
+//     text.innerHTML = 'Add';
+//   }
 
-};
+// };
 
-function removeEgg(array,){
-  const reversedFoods = array.reverse()
-  const result = [];
-  let eggsRemoved = 0;
-  for(let i =0;i<reversedFoods.length;i++){
-    if (array[i]==='Egg'&& eggsRemoved<2){
-      eggsRemoved++;
-      continue;
-    }
-    result.push(reversedFoods[i]);
+// function removeEgg(array,){
+//   const reversedFoods = array.reverse()
+//   const result = [];
+//   let eggsRemoved = 0;
+//   for(let i =0;i<reversedFoods.length;i++){
+//     if (array[i]==='Egg'&& eggsRemoved<2){
+//       eggsRemoved++;
+//       continue;
+//     }
+//     result.push(reversedFoods[i]);
     
 
-  }
-};
+//   }
+// };
 
-data = ['Egg','apple','Egg','Egg','ham'];
-console.log(removeEgg(data,'Egg'));
+// data = ['Egg','apple','Egg','Egg','ham'];
+// console.log(removeEgg(data,'Egg'))
+// multiply = (num1,num2)=>{return num1*num2};
 
+// console.log(multiply(2,3));
+
+countpositive = (array)=>{
+  let count = 0;
+  array.forEach((numbers)=>{
+    if(numbers>0)
+    {count++;}}
+);return count;}
+
+const Aryan = [1,2,3,4,-4,-5,8]
+console.log(countpositive(Aryan));
   
   </script>
 </body>

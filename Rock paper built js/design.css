@@ -17,7 +17,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-button.same {
+button.same-jsrock,.same-jspaper,.same-jsscissors {
   background: none;
   border: 3px solid white;
   border-radius: 50%;
@@ -27,9 +27,10 @@ button.same {
   transition: all 0.3s ease;
 }
 
-button.same:hover {
+button.same-jsscissors:hover,.same-jspaper:hover,.same-jsrock:hover {
   transform: scale(1.1);
 }
+
 
 .move-icon {
   width: 50px;
